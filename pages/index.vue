@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero :imageSource="'https://www.google.com/url?sa=i&url=http%3A%2F%2Ft0.gstatic.com%2Flicensed-image%3Fq%3Dtbn%3AANd9GcQ76JWs-bsZOrqtpjblvp6TOvYdxRaOTt5pHnN1X3P0y9Q7ERZggupGsG8riY2eP8UOqaw4z7qa0iRc1MU&psig=AOvVaw3wWWfyiDzi32eeaBVl8SNd&ust=1670787558906000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCODT9-jm7_sCFQAAAAAdAAAAABAE'"/>
+    <Hero :imageSource="imageSrc"/>
     <Button 
       :buttonName="'Click Me!'"
       :onClick="() => clickTest()"
@@ -11,10 +11,20 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      imageSrc: "",
+      counter: 0
+    }
+  },  
   methods: {
     clickTest() {
-      debugger
-      console.log('toca mi ano')
+      if(this.counter % 2 === 0) {
+        this.imageSrc = "https://www.idlememe.com/wp-content/uploads/2022/09/shrek-meme-idlememe-18-300x472.jpg"
+      } else {
+        this.imageSrc = "https://cdn.custom-cursor.com/packs/476/pack437.png"
+      }
+      this.counter++;
     }
   }
 }

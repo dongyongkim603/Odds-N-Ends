@@ -7,6 +7,11 @@
     name: 'Hero',
     props: {
         imageSource: String
+    },
+    data() {
+      return {
+        src: this.imageSource  
+      }
     }
   }
   </script>
