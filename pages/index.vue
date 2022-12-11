@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home__page">
     <Hero :imageSource="imageSrc"/>
     <Button 
       :buttonName="'Click Me!'"
@@ -13,7 +13,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      imageSrc: "",
+      imageSrc: "https://wallpapers.com/images/hd/spain-flag-urban-cityscape-897c7t2cv5ptoa55.jpg",
       counter: 0
     }
   },  
@@ -29,3 +29,8 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .home__page {
+    margin-top: 4rem;
+  }
+</style>
