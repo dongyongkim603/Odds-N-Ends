@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
   .hero__container {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .hero__image {
